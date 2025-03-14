@@ -445,22 +445,81 @@ mark {
     }
 }
 
-#capa-anvisa .capa-anvisa-conteudo {
+/* Estilo para a seção da ANVISA */
+#capa-anvisa.fundo-rosa {
+    padding: 40px 0; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+}
+
+/* Container da imagem e texto */
+.capa-anvisa-conteudo {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+    align-items: center; /* Alinha os itens verticalmente */
     gap: 20px; /* Espaço entre a imagem e o texto */
 }
 
-#capa-anvisa .imagem-anvisa {
-    flex: 1;
+/* Estilo para a imagem */
+.imagem-anvisa {
+    flex: 1 1 300px; /* A imagem ocupa 300px de largura, mas pode crescer ou encolher */
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    text-align: center; /* Centraliza a imagem */
 }
 
-#capa-anvisa .texto-anvisa {
-    flex: 2;
+.imagem-anvisa img {
+    width: 100%; /* A imagem ocupa 100% do container */
+    max-width: 400px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
-#capa-anvisa .btn {
-    margin-top: 20px; /* Espaço acima do botão */
+/* Estilo para o texto */
+.texto-anvisa {
+    flex: 2 1 400px; /* O texto ocupa mais espaço que a imagem */
+    max-width: 100%; /* Garante que o texto não ultrapasse o tamanho do container */
+}
+
+.texto-anvisa h2 {
+    font-size: 2rem; /* Tamanho do título */
+    margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+.texto-anvisa p {
+    font-size: 1.1rem; /* Tamanho do parágrafo */
+    margin-bottom: 1.5rem; /* Espaçamento inferior */
+}
+
+/* Estilo para o botão */
+.texto-anvisa .btn {
+    background-color: #46961A; /* Cor de fundo do botão */
+    color: #fffdfd; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado do link */
+    font-weight: bold; /* Texto em negrito */
+    display: inline-block; /* Permite definir padding e margin */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.texto-anvisa .btn:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .capa-anvisa-conteudo {
+        flex-direction: column; /* Coloca a imagem e o texto um embaixo do outro */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .imagem-anvisa {
+        flex: 1 1 auto; /* A imagem ocupa o espaço necessário */
+        max-width: 80%; /* Reduz a largura da imagem em telas pequenas */
+    }
+
+    .texto-anvisa {
+        flex: 1 1 auto; /* O texto ocupa o espaço necessário */
+    }
 }
 
 /* Estilo para a seção de resultados reais */
