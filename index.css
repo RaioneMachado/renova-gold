@@ -63,6 +63,7 @@ nav ul li a {
 .hero-content {
     flex: 1;
     max-width: 50%;
+    text-align: left; /* Alinha o texto à esquerda */
 }
 
 .hero-icon img {
@@ -85,7 +86,91 @@ nav ul li a {
 .beneficios-lista {
     list-style: none;
     margin-bottom: 1.5rem;
+    padding-left: 0; /* Remove o padding padrão da lista */
 }
+
+.beneficios-lista li {
+    font-size: 1rem;
+    color: #ece8e8;
+    margin-bottom: 0.5rem;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .hero-content {
+        max-width: 100%; /* Faz o conteúdo ocupar toda a largura */
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Reduz o tamanho da fonte do parágrafo */
+    }
+
+    .beneficios-lista li {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte da lista */
+    }
+}
+
+/* Estilo do botão flutuante */
+.floating-btn {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do fundo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o centro */
+    background-color: #46961A; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 15px 30px; /* Espaçamento interno */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    border: none; /* Remove a borda */
+    border-radius: 50px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    animation: blink 3s infinite; /* Animação de piscar mais lenta (3 segundos) */
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: flex; /* Usa flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center; /* Garante que o texto esteja centralizado */
+    z-index: 1000; /* Garante que o botão fique sempre na frente */
+}
+
+/* Animação de piscar */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Visível */
+    }
+    50% {
+        opacity: 0.5; /* Meio transparente */
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .floating-btn {
+        font-size: 1rem; /* Reduz o tamanho da fonte no celular */
+        padding: 10px 20px; /* Reduz o padding no celular */
+    }
+}
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .floating-btn {
+        font-size: 1rem; /* Reduz o tamanho da fonte no celular */
+        padding: 10px 20px; /* Reduz o padding no celular */
+    }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    .floating-btn {
+        font-size: 1rem; /* Reduz o tamanho da fonte no celular */
+        padding: 10px 20px; /* Reduz o padding no celular */
+    }
+}
+
 
 .beneficios-lista li {
     background: #fcfbfb;
